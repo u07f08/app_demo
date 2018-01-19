@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#666666"
+    android:paddingBottom="@dimen/item_media_list_padding_bottom"
+    android:paddingEnd="@dimen/item_media_list_padding_right"
+    android:paddingStart="@dimen/item_media_list_padding_left"
+    android:paddingTop="@dimen/item_media_list_padding_top">
+
+    <ImageView
+        android:id="@+id/item_media_list_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/item_media_list_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_media_list_video_layout_height"
+        android:layout_alignParentBottom="true"
+        android:background="#7F000000"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/item_media_list_video_layout_image_width"
+            android:layout_height="@dimen/item_media_list_video_layout_image_height"
+            android:layout_centerVertical="true"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/item_media_list_video_duration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_media_list_audio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_media_list_video_layout_height"
+        android:layout_alignParentBottom="true"
+        android:background="#7F000000"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/item_media_list_audio_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textSize="@dimen/item_media_list_audio_file_title_text_size" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_media_list_select_image_background"
+        android:layout_width="@dimen/item_media_list_image_width"
+        android:layout_height="@dimen/item_media_list_image_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/item_media_list_image_margin_bottom"
+        android:layout_marginEnd="@dimen/item_media_list_image_margin_end"
+        android:background="@drawable/layout_media_update_select_item_button_circle" />
+
+    <ImageView
+        android:id="@+id/item_media_list_select_image"
+        android:layout_width="@dimen/item_media_list_image_width"
+        android:layout_height="@dimen/item_media_list_image_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/item_media_list_image_margin_bottom"
+        android:layout_marginEnd="@dimen/item_media_list_image_margin_end"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

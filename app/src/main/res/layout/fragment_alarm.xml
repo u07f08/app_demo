@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/alarm_switch_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/alarm_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/alarm_switch_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/alarm_switch"
+            android:text="@string/alarm_switch_text"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/alarm_switch_text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/alarm_method_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarm_switch_container"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/alarm_remind_method_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alarm_remind_method_text"
+            android:textSize="@dimen/alarm_switch_text_size" />
+
+        <Button
+            android:id="@+id/alarm_remind_method_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/alarm_remind_method_title"
+            android:text="@string/alarm_method_notify" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/alarm_remind_frequency_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarm_method_container"
+        android:background="@color/colorGray"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
+
+        <Spinner
+            android:id="@+id/alarm_remind_frequency_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/alarm_remind_frequency_spinner"
+            android:text="@string/alarm_eat_frequency_text"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/alarm_switch_text_size" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/alarm_setting_time_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/alarm_remind_frequency_container" />
+
+    <View
+        android:id="@+id/alarm_func_shaded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/alarm_switch_container"
+        android:background="#88888888" />
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Demo App</string>
+    <string name="permission_deny">Permission Deny</string>
+    <string name="network_error">Network Error,%1$s</string>
+    <string name="location_error">無法偵測到定位，請確認定位功能已開啟</string>
+    <string name="dialog_error_title">錯誤訊息</string>
+    <string name="dialog_btn_ok">確定</string>
+
+    <!--main page-->
+    <string name="main_page_weather_title">Weather</string>
+    <string name="main_page_file_title">File</string>
+    <string name="main_page_alarm_title">Alarm</string>
+
+    <!--file page-->
+    <string name="file_page_select_all">Select All</string>
+    <string name="file_page_unselected_all">Unselected All</string>
+
+    <!--weather page-->
+    <string name="weather_detail_temperature_title_text">現在溫度：</string>
+    <string name="weather_detail_feel_temperature_title_text">體感溫度：</string>
+    <string name="weather_detail_humidity_title_text">濕&#12288;&#12288;度：</string>
+    <string name="weather_city_county">%1$s&#12288;%2$s</string>
+    <string name="weather_temperature">%1$d° </string>
+    <string name="weather_humidity">%1$d </string>
+    <string name="weather_c">℃</string>
+    <string name="weather_f">℉</string>
+    <string name="weather_temperature_unit">單位：%1$s</string>
+    <string name="weather_update_date_text">更新時間：%1$s</string>
+    
+    <!--alarm page-->
+    <string name="alarm_switch_text">提醒%1$s</string>
+    <string name="alarm_on">ON</string>
+    <string name="alarm_off">OFF</string>
+    <string name="alarm_remind_method_text">提醒方法</string>
+    <string name="alarm_eat_frequency_text">吃藥次數</string>
+    <string name="alarm_method_notify">僅通知</string>
+    <string name="alarm_method_notify_vibrator">通知 + 震動</string>
+    <string name="alarm_not_has_vibrator">此裝置不支援震動</string>
+    
+    <!--alarm item-->
+    <string name="alarm_eat_times_text">第%1$s次\n吃藥時間</string>
+    <string name="alarm_time_text_format">%1$s：%2$s</string>
+    <string name="alarm_time_text_init">00：00</string>
+    <string-array name="alarm_eat_total_times">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

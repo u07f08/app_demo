@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/weather_error_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:textSize="22sp"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/weather_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/weather_root_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/weather_description_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/weather_description_margin_top">
+
+                    <ImageView
+                        android:id="@+id/weather_description_image"
+                        android:layout_width="@dimen/weather_description_image_height_width"
+                        android:layout_height="@dimen/weather_description_image_height_width"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/weather_sun" />
+
+                    <TextView
+                        android:id="@+id/weather_description_city_county"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/weather_description_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/weather_description_margin_top"
+                        android:text="台中市 清水區"
+                        android:textSize="@dimen/weather_description_text_size" />
+
+                    <TextView
+                        android:id="@+id/weather_description_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/weather_description_city_county"
+                        android:layout_centerHorizontal="true"
+                        android:text="多雲"
+                        android:textSize="@dimen/weather_description_text_size" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/weather_detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/weather_description_container"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/weather_detail_temperature_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weather_detail_temperature_title_text"
+                            android:textSize="@dimen/weather_temperature_title_text_size" />
+
+                        <TextView
+                            android:id="@+id/weather_detail_temperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="32° "
+                            android:textSize="@dimen/weather_temperature_text_size" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weather_detail_temperature">
+
+                            <TextView
+                                android:id="@+id/weather_detail_temperature_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/weather_detail_unit_switch"
+                                android:text="@string/weather_temperature_unit"
+                                android:textSize="@dimen/weather_unit_text_size" />
+
+                            <Switch
+                                android:id="@+id/weather_detail_unit_switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/weather_detail_feel_temperature_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weather_detail_feel_temperature_title_text"
+                            android:textSize="@dimen/weather_temperature_title_text_size" />
+
+                        <TextView
+                            android:id="@+id/weather_detail_feel_temperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weather_detail_feel_temperature_title"
+                            android:text="32°"
+                            android:textSize="@dimen/weather_subtitle_text_size" />
+
+                        <TextView
+                            android:id="@+id/weather_detail_humidity_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weather_detail_feel_temperature"
+                            android:text="@string/weather_detail_humidity_title_text"
+                            android:textSize="@dimen/weather_temperature_title_text_size" />
+
+                        <TextView
+                            android:id="@+id/weather_detail_humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weather_detail_humidity_title"
+                            android:text="60％"
+                            android:textSize="@dimen/weather_subtitle_text_size" />
+
+                        <TextView
+                            android:id="@+id/weather_detail_update_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weather_detail_humidity"
+                            android:text="@string/weather_update_date_text"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<resources>
+
+    <!--media_list_fragment-->
+    <dimen name="media_list_header_margin_left">20dp</dimen>
+    <dimen name="media_list_header_margin_top">20dp</dimen>
+    <dimen name="media_list_header_select_image_width">22dp</dimen>
+    <dimen name="media_list_header_select_image_height">22dp</dimen>
+    <dimen name="media_list_header_select_text_padding_left">10dp</dimen>
+    <dimen name="media_list_header_select_text_text_size">17sp</dimen>
+    <dimen name="media_list_update_button_width">48dp</dimen>
+    <dimen name="media_list_update_button_margin_left">50dp</dimen>
+    <dimen name="media_list_update_button_margin_right">50dp</dimen>
+    <dimen name="media_list_update_button_text_size">18sp</dimen>
+    <dimen name="media_list_recycler_view_margin_top">15dp</dimen>
+
+    <!--item_media_update_select_general-->
+    <dimen name="item_media_list_padding_right">10dp</dimen>
+    <dimen name="item_media_list_padding_left">10dp</dimen>
+    <dimen name="item_media_list_padding_top">10dp</dimen>
+    <dimen name="item_media_list_padding_bottom">10dp</dimen>
+    <dimen name="item_media_list_video_layout_height">30dp</dimen>
+    <dimen name="item_media_list_video_layout_image_width">20dp</dimen>
+    <dimen name="item_media_list_video_layout_image_height">20dp</dimen>
+    <dimen name="item_media_list_image_width">30dp</dimen>
+    <dimen name="item_media_list_image_height">30dp</dimen>
+    <dimen name="item_media_list_image_margin_bottom">5dp</dimen>
+    <dimen name="item_media_list_image_margin_end">5dp</dimen>
+    <dimen name="item_media_list_audio_file_title_text_size">12sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--weather_fragment-->
+    <dimen name="weather_description_margin_top">25dp</dimen>
+    <dimen name="weather_description_image_height_width">130dp</dimen>
+    <dimen name="weather_description_text_margin_top">15dp</dimen>
+    <dimen name="weather_description_text_size">28sp</dimen>
+    <dimen name="weather_temperature_title_text_size">15sp</dimen>
+    <dimen name="weather_temperature_text_size">100sp</dimen>
+    <dimen name="weather_subtitle_margin_top">8dp</dimen>
+    <dimen name="weather_subtitle_text_size">40sp</dimen>
+    <dimen name="weather_unit_text_size">18sp</dimen>
+
+    <!--alarm fragment-->
+    <dimen name="alarm_switch_text_size">22sp</dimen>
+</resources>
