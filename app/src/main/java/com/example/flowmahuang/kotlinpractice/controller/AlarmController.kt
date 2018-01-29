@@ -117,6 +117,8 @@ class AlarmController(val mContext: Context) {
     }
 
     fun setRecyclerViewAdapter(view: RecyclerView) {
+        var layoutHeight = view.height
+
         val timeArray = ArrayList<Map<String, Int>>()
         var map = HashMap<String, Int>()
         map.put("hour", mAlarmPreferences.getFirstHour())
@@ -132,6 +134,7 @@ class AlarmController(val mContext: Context) {
         timeArray.add(map)
 
         mRecyclerViewAdapter = AlarmItemRecyclerViewAdapter(mContext, recyclerViewAdapterCallback, timeArray)
+        mRecyclerViewAdapter.setItemHeight(layoutHeight / 3)
         val layoutManager = LinearLayoutManager(mContext)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
 

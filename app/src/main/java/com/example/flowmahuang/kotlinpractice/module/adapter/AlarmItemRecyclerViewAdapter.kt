@@ -22,6 +22,7 @@ class AlarmItemRecyclerViewAdapter(
     private val inflater: LayoutInflater = LayoutInflater.from(mContext)
     private var mInitTimeArray: ArrayList<Map<String, Int>> = initTime
     private var itemCount = 1
+    private var mItemViewHeight = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val v = inflater.inflate(
@@ -37,6 +38,14 @@ class AlarmItemRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
         val view = holder!!.itemView
+        if (mItemViewHeight != 0) {
+            val params = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    mItemViewHeight
+            )
+            view.layoutParams = params
+        }
+
         val eatTimesView = view.findViewById<TextView>(R.id.item_alarm_eat_times)
         val timeView = view.findViewById<TextView>(R.id.item_alarm_notice_time)
 
@@ -88,4 +97,7 @@ class AlarmItemRecyclerViewAdapter(
         itemCount = item
     }
 
+    fun setItemHeight(height: Int) {
+        mItemViewHeight = height
+    }
 }

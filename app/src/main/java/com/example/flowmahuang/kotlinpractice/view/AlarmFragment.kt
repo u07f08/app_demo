@@ -37,8 +37,10 @@ class AlarmFragment : Fragment() {
 
         initViewInformation()
 
-        mController.setRecyclerViewAdapter(mAlarmSettingTimeRecyclerView)
-        mController.setAlarmTotalTimes(1)
+        mAlarmSettingTimeRecyclerView.post({
+            mController.setRecyclerViewAdapter(mAlarmSettingTimeRecyclerView)
+        })
+
         mAlarmSwitch.setOnCheckedChangeListener(switchChangeListener)
         mAlarmRemindMethodButton.setOnClickListener(clickListener)
         mAlarmRemindFrequencySpinner.onItemSelectedListener = spinnerItemClickListener
@@ -46,7 +48,7 @@ class AlarmFragment : Fragment() {
         return v
     }
 
-    private fun initViewInformation(){
+    private fun initViewInformation() {
         val switchText: String
         if (mController.getAlarmSwitch()) {
             switchText = getString(R.string.alarm_on)
@@ -69,7 +71,6 @@ class AlarmFragment : Fragment() {
         )
         mAlarmRemindFrequencySpinner.adapter = timesArray
         mAlarmRemindFrequencySpinner.setSelection(mController.getAlarmTotalTimes() - 1)
-
     }
 
     private val switchChangeListener = CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->

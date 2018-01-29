@@ -65,7 +65,8 @@ class AlarmService : Service() {
                 settingMin = Integer.valueOf(mAlarmPreferences.getFirstMin())
             }
         }
-        mAlarmIntent.putExtra(AlarmConstantManager.VIBRATOR_ID,mAlarmPreferences.getVibratorSwitch())
+        mAlarmIntent.putExtra(AlarmConstantManager.VIBRATOR_ID, mAlarmPreferences.getVibratorSwitch())
+        mAlarmIntent.putExtra(AlarmConstantManager.ALARM_ID, id)
         pendingIntent = PendingIntent.getBroadcast(this, id, mAlarmIntent, PendingIntent.FLAG_ONE_SHOT)
 
         calendar.set(Calendar.HOUR_OF_DAY, settingHour)

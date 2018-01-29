@@ -27,10 +27,11 @@ class AlarmReceiver : BroadcastReceiver() {
         if (isVibration) {
             val vibrator = context.getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
             if (vibrator.hasVibrator()) {
+                val vibrationTimeArray = longArrayOf(100, 350, 250, 150, 150, 150)
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE))
+                    vibrator.vibrate(VibrationEffect.createWaveform(vibrationTimeArray, intArrayOf(255, 255), -1))
                 } else {
-                    vibrator.vibrate(200)
+                    vibrator.vibrate(vibrationTimeArray, -1)
                 }
             }
         }
@@ -44,6 +45,6 @@ class AlarmReceiver : BroadcastReceiver() {
                 .build()
         notificationManager.notify(id, notification)
 
-        Log.e("AlarmReceiver",id.toString())
+        Log.e("AlarmReceiver", id.toString())
     }
 }
