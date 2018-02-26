@@ -117,7 +117,7 @@ class AlarmController(val mContext: Context) {
     }
 
     fun setRecyclerViewAdapter(view: RecyclerView) {
-        var layoutHeight = view.height
+        val layoutHeight = view.height
 
         val timeArray = ArrayList<Map<String, Int>>()
         var map = HashMap<String, Int>()

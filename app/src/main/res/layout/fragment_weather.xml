@@ -8,8 +8,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:visibility="invisible"
-        android:textSize="22sp"/>
+        android:textSize="22sp"
+        android:visibility="invisible" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/weather_refresh_layout"
@@ -18,13 +18,12 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/weather_root_rl"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
                 <RelativeLayout
                     android:id="@+id/weather_description_container"
@@ -155,7 +154,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/weather_detail_humidity"
-                            android:text="@string/weather_update_date_text"/>
+                            android:text="@string/weather_update_date_text" />
 
                     </RelativeLayout>
 

@@ -29,15 +29,15 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!--weather_fragment-->
-    <dimen name="weather_description_margin_top">35dp</dimen>
-    <dimen name="weather_description_image_height_width">180dp</dimen>
+    <dimen name="weather_description_margin_top">25dp</dimen>
+    <dimen name="weather_description_image_height_width">150dp</dimen>
     <dimen name="weather_description_text_margin_top">20dp</dimen>
-    <dimen name="weather_description_text_size">32sp</dimen>
-    <dimen name="weather_temperature_title_text_size">20sp</dimen>
-    <dimen name="weather_temperature_text_size">200sp</dimen>
+    <dimen name="weather_description_text_size">30sp</dimen>
+    <dimen name="weather_temperature_title_text_size">16sp</dimen>
+    <dimen name="weather_temperature_text_size">70sp</dimen>
     <dimen name="weather_subtitle_margin_top">15dp</dimen>
-    <dimen name="weather_subtitle_text_size">50sp</dimen>
-    <dimen name="weather_unit_text_size">20sp</dimen>
+    <dimen name="weather_subtitle_text_size">42sp</dimen>
+    <dimen name="weather_unit_text_size">18sp</dimen>
 
     <!--alarm fragment-->
     <dimen name="alarm_switch_text_size">40sp</dimen>
