@@ -282,14 +282,15 @@ public class MediaSelectRecyclerViewAdapter extends RecyclerView.Adapter {
                     Thread task = mBitmapThread(dataDetail);
                     taskCollection.add(task);
                     task.start();
-                } else {
-                    ImageView imageView = (ImageView) mRecyclerView
-                            .findViewWithTag(imageKey);
-                    if (imageView != null) {
-                        imageView.setImageBitmap(bitmap);
-                        notifyDataSetChanged();
-                    }
                 }
+//                else {
+//                    ImageView imageView = (ImageView) mRecyclerView
+//                            .findViewWithTag(imageKey);
+//                    if (imageView != null) {
+//                        imageView.setImageBitmap(bitmap);
+//                        notifyDataSetChanged();
+//                    }
+//                }
             }
         } catch (Exception e) {
             e.printStackTrace();

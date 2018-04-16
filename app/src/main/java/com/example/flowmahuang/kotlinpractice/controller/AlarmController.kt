@@ -135,6 +135,7 @@ class AlarmController(val mContext: Context) {
 
         mRecyclerViewAdapter = AlarmItemRecyclerViewAdapter(mContext, recyclerViewAdapterCallback, timeArray)
         mRecyclerViewAdapter.setItemHeight(layoutHeight / 3)
+        mRecyclerViewAdapter.itemCount = getAlarmTotalTimes()
         val layoutManager = LinearLayoutManager(mContext)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
 
